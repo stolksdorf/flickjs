@@ -1,0 +1,21 @@
+In your javascript file you can now access 'flick'
+
+You can add in elements to track flick events on like this:
+flick.add([jQuery object], [function to handle the flick]);
+
+the function should have 3 parameters: difference in X, difference in y, and time elasped. Example:
+
+function foo(pageX, pageY, time){
+	alert(time +" - " + pageX + " - " + pageY);
+}
+Check out the demo folder for a demo
+
+flick also has time and distance thresholds. These are used to tell the difference from a click and a flick.
+Initally they are set at 80 and 15 respectively. 
+I encourage to to experiment with different numbers until they are properly differienting between clicks and flicks on whatever screen you are using.
+
+example:
+flick.timeThreshold = 100;
+flick.distanceThreshold = 5;
+
+That should be all you need.
